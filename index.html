@@ -4,62 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NY Sports</title> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap">
-        <style>
-      body{
-        font-family: arial;
-      }
-        /* Styles for the card layout */
-        .card {
-  display: grid;
-  grid-template-columns: auto 1fr;
+    <title>NY Sports - This Week</title>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+ 
+ <style>
+
+  .header h1 {
+    font-family: 'Faster One', cursive;
+      font-size: 84px;
+      font-weight: lighter;
+      letter-spacing: 8px;
+      color: white;
+      margin-top: 0;
+      margin-bottom: 10px;
+  }
+
+  .header h2 {
+      font-family: 'ABeeZee', sans-serif;
+      font-size: 24px;
+      color: white;
+      margin-top: -10px;
+    }
+
+  body {
+      background-color: #93D3FB;
+      font-family: arial;
+  }
+
+  .game-date {
+    font-family: arial;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .game-title {
+    font-family: arial;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .team-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .team-logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .team-name {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .logo-score {
+  display: flex;
   align-items: center;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
 }
 
-.header h1 {
-            font-family: 'Faster One', cursive;
-            font-size: 7vw;
-            text-align: center;
-        }
-
-        body {
-            background-color: #93D3FB;
-        }
-.card img {
-  height: 40px;
+.team-logo {
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
-  width: 40px;
 }
 
-.card h1 {
-  font-family: arial;
-  font-size: 16px;
-  margin-bottom: 10px;
+.score-info {
+  margin-top: 10px;
 }
 
-.card p {
-  font-size: 18px;
-  margin-bottom: 10px;
+.team-info {
+  margin-top: 10px;
 }
 
-.wrapper{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
 
-      </style>
+
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+  }
+
+
+  .card img {
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+  }
+
+  .card h1 {
+    font-family: arial;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+</style>
 </head>
 <body>
   <div class="header">
-    <h1>NY Sports > This Week</h1>
+    <h1>NY Sports - This Week</h1>
+    <h2 style="color: white; margin-top: 0;">As of Today, <span id="current-date"></span></h2>
   </div>
     <div class="wrapper">
         <div class="mlb">
@@ -74,8 +138,22 @@
             <h1>NFL</h1>
             <div id="nflgame-scores-container"></div>
         </div>
+        <div class="NHL">
+          <h1>NHL</h1>
+          <div id="nhlgame-scores-container"></div>
+      </div>
     </div>
+    <script>
+      // JavaScript code to display the current date
+      window.addEventListener('DOMContentLoaded', () => {
+        const currentDate = new Date().toLocaleDateString('en-US', {
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric'
+        });
+        document.getElementById('current-date').textContent = currentDate;
+      });
+    </script>
 <script src="yankeescore.js"></script>
-<script src="knicksscore.js"></script>
 </body>
 </html>
