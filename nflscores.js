@@ -1,5 +1,5 @@
 async function getNHLscores() {
-    const apiKey = '100bd1992920e53de5b70fcb3e6267e4'; // replace with your own API key
+    const apiKey = 'e26b4888a9147dca186a69eb00b33221'; // replace with your own API key
   
     // Fetch Knicks games
     const giantsEndpoint = 'https://v1.american-football.api-sports.io/games/?league=1&season=2022&team=4';
