@@ -1,94 +1,94 @@
 const prayers = [
     {
-      name: 'Modeh Ani',
+      name: 'מודה אני',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Modeh_Ani.2?lang=bi'
     },
     {
-      name: 'Netilat Yadayim',
+      name: 'נטילת ידים',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Netilat_Yadayim?lang=bi'
     },
     {
-      name: 'Asher Yatzar',
+      name: 'אשר יצר',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Asher_Yatzar?lang=bi'
     },
     {
-      name: 'Elokai Neshama',
+      name: 'אלוקי נשמה',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Elokai_Neshama?lang=bi'
     },
     {
-      name: 'Tzitzit',
+      name: 'ציצית',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Tzitzit?lang=bi'
     },
     {
-      name: 'Torah Blessings',
+      name: 'ברכת התורה',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Torah_Blessings?lang=bi'
     },
     {
-        name: "Torah Study",
+        name: "תלמוד תורה",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Torah_Study?lang=bi"
       },
     {
-        name: 'Tallit',
+        name: 'טלית',
         url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Tallit?lang=bi'
       },
       {
-        name: 'Tefillin',
+        name: 'תפלין',
         url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Tefillin?lang=bi'
       },
       {
-        name: 'Ma Tovu',
+        name: 'מה טבו',
         url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Ma_Tovu?lang=bi'
       },
     {
-      name: 'Adon Olam',
+      name: 'אדון עולם',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam?lang=bi'
     },
     {
-      name: 'Yigdal',
+      name: 'יגדל',
       url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Yigdal?lang=bi'
     },
     {
-        name: "Morning Blessings",
+        name: "ברכות השחר",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Morning_Blessings?lang=bi"
       },
       {
-        name: "Akedah",
+        name: "עקדה",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Akedah?lang=bi"
       },
       {
-        name: "Sovereignty of Heaven",
+        name: "עול מלכות שמים",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Sovereignty_of_Heaven?lang=bi"
       },
       {
-        name: "Kiyor",
+        name: "הכיור",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Kiyor?lang=bi"
       },
       {
-        name: "Terumat HaDeshen",
+        name: "תרומת הדשן",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Terumat_HaDeshen.1?lang=bi"
       },
       {
-        name: "Korban HaTamid",
+        name: "קרבן תמיד",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Korban_HaTamid.1?lang=bi"
       },
       {
-        name: "Ketoret",
+        name: "הקטורת",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Ketoret.1?lang=bi"
       },
       {
-        name: "Order of the Temple Service",
+        name: "סדר המערכה",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Order_of_the_Temple_Service.1?lang=bi"
       },
       {
-        name: "Laws of Sacrifices",
+        name: "דיני זבחים",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Laws_of_Sacrifices.1?lang=bi"
       },
       {
-        name: "Baraita of Rabbi Yishmael",
+        name: "ברייתא דרבי ישמעאל",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Baraita_of_Rabbi_Yishmael.1?lang=bi"
       },
       {
-        name: "Kaddish DeRabbanan",
+        name: "קדיש דרבנן",
         url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Kaddish_DeRabbanan.1?lang=bi"
       },
     // Add more prayers here
