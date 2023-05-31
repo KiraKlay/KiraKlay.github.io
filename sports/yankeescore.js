@@ -131,11 +131,11 @@ async function getNYBaseballGameScores() {
       scoreInfo.classList.add('score-info');
 
       const homeScoreElem = document.createElement('p');
-      homeScoreElem.textContent = `${homeTeamName+":"}: ${homeScore}`;
+      homeScoreElem.textContent = `${homeTeamName}: ${homeScore}`;
       scoreInfo.appendChild(homeScoreElem);
 
       const awayScoreElem = document.createElement('p');
-      awayScoreElem.textContent = `${awayTeamName +":"}: ${awayScore}`;
+      awayScoreElem.textContent = `${awayTeamName}: ${awayScore}`;
       scoreInfo.appendChild(awayScoreElem);
 
       card.appendChild(scoreInfo);

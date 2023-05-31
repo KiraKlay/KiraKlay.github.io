@@ -1,120 +1,107 @@
-const prayers = [
-    {
-      name: 'מודה אני',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Modeh_Ani.2?lang=bi'
-    },
-    {
-      name: 'נטילת ידים',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Netilat_Yadayim?lang=bi'
-    },
-    {
-      name: 'אשר יצר',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Asher_Yatzar?lang=bi'
-    },
-    {
-      name: 'אלוקי נשמה',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Elokai_Neshama?lang=bi'
-    },
-    {
-      name: 'ציצית',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Tzitzit?lang=bi'
-    },
-    {
-      name: 'ברכת התורה',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Torah_Blessings?lang=bi'
-    },
-    {
-        name: "תלמוד תורה",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Torah_Study?lang=bi"
-      },
-    {
-        name: 'טלית',
-        url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Tallit?lang=bi'
-      },
-      {
-        name: 'תפלין',
-        url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Tefillin?lang=bi'
-      },
-      {
-        name: 'מה טבו',
-        url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Ma_Tovu?lang=bi'
-      },
-    {
-      name: 'אדון עולם',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam?lang=bi'
-    },
-    {
-      name: 'יגדל',
-      url: 'https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Yigdal?lang=bi'
-    },
-    {
-        name: "ברכות השחר",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Morning_Blessings?lang=bi"
-      },
-      {
-        name: "עקדה",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Akedah?lang=bi"
-      },
-      {
-        name: "עול מלכות שמים",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Sovereignty_of_Heaven?lang=bi"
-      },
-      {
-        name: "הכיור",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Kiyor?lang=bi"
-      },
-      {
-        name: "תרומת הדשן",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Terumat_HaDeshen.1?lang=bi"
-      },
-      {
-        name: "קרבן תמיד",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Korban_HaTamid.1?lang=bi"
-      },
-      {
-        name: "הקטורת",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Ketoret.1?lang=bi"
-      },
-      {
-        name: "סדר המערכה",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Order_of_the_Temple_Service.1?lang=bi"
-      },
-      {
-        name: "דיני זבחים",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Laws_of_Sacrifices.1?lang=bi"
-      },
-      {
-        name: "ברייתא דרבי ישמעאל",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Baraita_of_Rabbi_Yishmael.1?lang=bi"
-      },
-      {
-        name: "קדיש דרבנן",
-        url: "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Korbanot%2C_Kaddish_DeRabbanan.1?lang=bi"
-      },
-    // Add more prayers here
-  ];
-  
-  function fetchPrayer(prayer) {
-    return fetch(prayer.url)
+var pageTitle = document.getElementById("pageTitle");
+var textdiv = document.getElementById("main-content");
+var textContent = document.getElementsByClassName("pageText");
+
+// Recursive function to fetch subsequent parts of the prayer
+function fetchNextPart(url) {
+    return fetch(url)
       .then(response => response.json())
-      .then(data => {
-        const text = data.he;
-        const prayerElement = document.createElement('div');
-        prayerElement.innerHTML = `<h2 style="text-align: right;">${prayer.name}</h2><p>${text}</p>`;
-        document.body.appendChild(prayerElement);
+      .then(pull => {
+        const refVariants = pull.ref;
+        const isWeekdayShacharit = refVariants.includes("Weekday, Shacharit");
+  
+        if (isWeekdayShacharit) {
+          const div = document.createElement("div");
+          div.classList.add("textContent");
+          textdiv.appendChild(div);
+          const heading = document.createElement("h3");
+          heading.className = "pageHeading";
+          heading.setAttribute("data-anchor", pull.ref.replace(/\s+/g, "-").toLowerCase()); // Set data-anchor attribute
+          div.appendChild(heading);
+          const innerDiv = document.createElement("div");
+          innerDiv.classList.add("pageText");
+          div.appendChild(innerDiv);
+          const hePasuk = pull.he;
+          heading.innerHTML = pull.heTitleVariants; // Use pull.ref instead of pull.heTitleVariants
+          hePasuk.forEach(pasuk => {
+            const p = document.createElement("p");
+            p.innerHTML = pasuk;
+            innerDiv.appendChild(p);
+          });
+  
+          addSectionToList(pull.ref); // Add section ref to the navigation list
+        }
+  
+        // Check if there is a next part
+        if (pull.next) {
+          // Fetch the next part recursively
+          return fetchNextPart(`https://www.sefaria.org/api/texts/${pull.next}`);
+        }
       })
       .catch(error => {
-        console.log(`Error fetching ${prayer.name}: ${error}`);
+        // Handle any errors that occur during the fetch
+        console.error('Error fetching part of the prayer:', error);
       });
   }
   
-  function fetchPrayers() {
-    return prayers.reduce((promise, prayer) => {
-      return promise.then(() => fetchPrayer(prayer));
-    }, Promise.resolve());
+  
+
+// Function to create navigation list with section titles
+function addSectionToList(title) {
+  const listItem = document.createElement("li");
+  const link = document.createElement("a");
+  link.textContent = title;
+  const anchorId = title.replace(/\s+/g, "-").toLowerCase();
+  link.href = "#" + anchorId; // Generate anchor link based on the section title
+  listItem.appendChild(link);
+  navList.appendChild(listItem);
+
+  // Update the corresponding pageHeading with a link
+  const pageHeading = document.querySelector(`h3[data-anchor="${anchorId}"]`);
+  if (pageHeading) {
+    pageHeading.innerHTML = `<a href="#${anchorId}">${title}</a>`;
   }
-  
-  fetchPrayers()
-    .then(() => console.log('All prayers fetched and displayed.'))
-    .catch(error => console.log(`Error: ${error}`));
-  
+
+  // Check if the navigation menu is open
+  const navbarCollapse = document.querySelector(".navbar-collapse.show");
+  if (navbarCollapse) {
+    // Add a click event listener to close the navigation menu when a link is clicked
+    link.addEventListener("click", () => {
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      if (navbarToggler) {
+        navbarToggler.click(); // Simulate a click on the hamburger menu button to close the menu
+      }
+    });
+  }
+}
+
+
+
+// Fetch Ashkenazi Siddur - Modeh Ani from Sefaria API
+fetchNextPart('https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Modeh_Ani?ven=Artscroll_siddur&lang=bi');
+
+function adjustFontSize(size) {
+  const textContentElements = document.getElementsByClassName("textContent");
+  for (let i = 0; i < textContentElements.length; i++) {
+    textContentElements[i].style.fontSize = size + "px";
+  }
+}
+
+// Event listener for font size change
+document.addEventListener("DOMContentLoaded", () => {
+  const fontSizeButtons = document.querySelectorAll(".font-size-btn");
+
+  fontSizeButtons.forEach(button => {
+    button.addEventListener("click", event => {
+      const fontSize = event.target.dataset.fontSize;
+      adjustFontSize(fontSize);
+    });
+  });
+});
+
+// Example HTML for modal:
+// <div class="modal">
+//   <button class="font-size-btn" data-font-size="18">18px</button>
+//   <button class="font-size-btn" data-font-size="22">22px</button>
+//   <button class="font-size-btn" data-font-size="26">26px</button>
+// </div>
